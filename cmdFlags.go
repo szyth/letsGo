@@ -10,12 +10,17 @@ func main(){
 
 
   //another way
-  var name string
+  var(
+    name string
+    boolean bool
+  )
   flag.StringVar(&name,"name","zia","short desc for name")
+  flag.BoolVar(&boolean,"boolean",false,"short desc for boolean")
 
 
   flag.Parse()
   fmt.Println("Word:",*flag1ptr)
   fmt.Println("Number:",*flag2ptr)
   fmt.Println("Name:",name)
+  fmt.Println("Boolean:",boolean)
 }
